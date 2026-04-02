@@ -20,7 +20,9 @@
 
         <s:if test="searchQuery != null">
             <p class="bg-success">
-                Listing products with <strong>search query: </strong> <%= request.getParameter("searchQuery") %>
+                Listing products with <strong>search query: </strong> <%= request.getParameter("searchQuery") 
+if (query == null) query = "";
+%>
                 &nbsp; &nbsp;
                 <small><a href="<s:url action="listProduct"/>">
                     <i class="fa fa-remove"></i> Clear
