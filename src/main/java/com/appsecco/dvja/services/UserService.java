@@ -48,10 +48,10 @@ public class UserService {
             return false;
         if(StringUtils.isEmpty(password))
             return false;
-
-        return user.getPassword().equals(hashEncodePassword(password));
-        System.out.println("DB pass : " + user.getPassword());
-        System.out.println("Input   : " + hashEncodePassword(password));
+private PasswordEncoder passwordEncoder;
+public boolean validate(User user, String password) {
+    return passwordEncoder.matches(password, user.getPassword());
+}
 
     }
 
