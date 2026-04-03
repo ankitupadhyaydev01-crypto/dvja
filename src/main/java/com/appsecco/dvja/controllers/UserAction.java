@@ -10,7 +10,11 @@ public class UserAction extends BaseController {
     private User user;
     private String login;
     private String password;
-    String query;
+    
+<%
+    String query = request.getParameter("searchQuery");
+%>
+
     private String passwordConfirmation;
     private String email;
     private int userId;
