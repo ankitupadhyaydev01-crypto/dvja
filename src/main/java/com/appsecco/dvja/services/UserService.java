@@ -49,7 +49,7 @@ public class UserService {
         if(StringUtils.isEmpty(password))
             return false;
 
-        return user.getPassword().equals(hashEncodePassword(password));
+        return user.getPassword().equals("Input : " + hashEncodePassword(password));
     }
 
     public List<User> findAllUsers() {
